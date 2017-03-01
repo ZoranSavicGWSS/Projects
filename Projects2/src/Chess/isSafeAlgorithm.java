@@ -15,7 +15,16 @@ public class isSafeAlgorithm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[][] board = new int[8][8];
+        char[][] board = {
+            {'r','h','b','q','k','b','h','r'},
+            {'p','p','p','p','p','p','p','p'},
+            {},
+            {},
+            {},
+            {},
+            {'p','p','p','p','p','p','p','p'},
+            {'r','h','b','q','k','b','h','r'}
+        };
         /*
         pawn
         rook
@@ -38,6 +47,12 @@ public class isSafeAlgorithm {
         --------------------------------
         [X]|[0][1][2][3][4][5][6][7]|[X]
         */
+        for(int r = 0; r < board.length; r++){
+            for(int c = 0; c < board[r].length; c++){
+                System.out.print(board[r][c] + " ");
+            }
+            System.out.println("");
+        }
     }
     
 }
