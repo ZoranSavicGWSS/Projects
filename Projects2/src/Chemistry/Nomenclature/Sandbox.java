@@ -16,9 +16,8 @@ public class Sandbox {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String s = "abc1db";
-        int i =  Integer.parseInt(s);
-        System.out.println(i);
+        String name = "4-methyl";
+        System.out.println(name.substring(name.indexOf("yl")-4,name.indexOf("yl")));
     }
     
 }

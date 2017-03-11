@@ -21,6 +21,7 @@ public class DrawingCarbonCompounds {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a name.");
         String name = input.nextLine();
+        System.out.println("");
         identifyLongestChain(name);
 
     }
@@ -59,7 +60,38 @@ public class DrawingCarbonCompounds {
             carbonCount = 10;
             drawChain(carbonCount, name);
         }
+        if(name.contains("yl")){
+            System.out.println("in yl");
+            int chainLocation = -1;
+            System.out.println(name.substring(name.indexOf("yl") - 4, name.indexOf("yl")));
+            if(name.substring(name.indexOf("yl") - 4, name.indexOf("yl")) .equalsIgnoreCase("meth")){
+                System.out.println("in meth");
+                chainLocation = Integer.parseInt(name.substring(name.indexOf("yl") - 6, name.indexOf("yl")-5));
+                System.out.println("chainLocation = " + chainLocation);
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "eth"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "rop"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "but"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "ent"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "hex"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "ept"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "oct"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "non"){
+                
+            } else if(name.substring(name.indexOf("yl") - 3, name.indexOf("yl")) == "dec"){
+                
+            }
+        }
 
+    }
+    public static void drawSideChain(int chainLength, int carbonNum){
+        
     }
 
     public static void drawChain(int carbonNum, String name) {
@@ -70,7 +102,6 @@ public class DrawingCarbonCompounds {
         } else if(name.contains("yne")){
             tripleAt = Integer.parseInt(name.substring(name.length() - 5, name.length() - 4));
         }
-        System.out.println("");
         System.out.print("C");
         for (int i = 1; i < carbonNum; i++) {
             if(i == doubleAt){
