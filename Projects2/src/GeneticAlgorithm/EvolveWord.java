@@ -97,44 +97,32 @@ public class EvolveWord {
             for (int i = 0; i < popInt.length - 1; i++) {
                 if (Math.abs(popInt[i] - 372) > Math.abs(popInt[i + 1] - 372)) {
                     // SWAP
-                    
-                    // INT
-                    temp = popInt[i];
-                    popInt[i] = popInt[i + 1];
-                    popInt[i + 1] = temp;
-                    
-                    // STRING
-                    tempS = population[i];
-                    population[i] = population[i+1];
-                    population[i+1] = tempS;
+                    swapFwd(popInt, population, i);
                     flag = true;
                 }
             }
 
         }
     }
-    public static void swap(int[] popInt, String[] population){
+    
+    public static void swapFwd(int[] popInt, String[] population, int i){
+        // TEMP VARIABLES
         int tempInt;
         String tempString;
-        // MAKE A SWAP FUNCTION
-    }
-
-    public static void sort1(int[] popInt, String[] population) {
-        int temp;
-        String tempS;
-        boolean flag = true;
-        while (flag) {
-            flag = false;
-            for (int i = 0; i < popInt.length - 1; i++) {
-                if (Math.abs(popInt[i] - 372)) {
-                    
-                }
-            }
-        }
+        
+        // INT
+        tempInt = popInt[i];
+        popInt[i] = popInt[i+1];
+        popInt[i+1] = tempInt;
+        
+        // STRING
+        tempString = population[i];
+        population[i] = population[i+1];
+        population[i+1] = tempString;
     }
 
     public static void Evolve(ArrayList<String> population, double mutationRatio, double crossRatio, double elitismRatio) {
-
+        
     }
 
 }
