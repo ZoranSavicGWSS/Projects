@@ -42,7 +42,7 @@ public class EvolveWord {
         //BEST 
         String best = "";
         while (generationCounter < maxGenerations && best != TARGET) {
-            Evolve();
+            //Evolve();
             generationCounter++;
         }
 
@@ -119,6 +119,11 @@ public class EvolveWord {
         tempString = population[i];
         population[i] = population[i+1];
         population[i+1] = tempString;
+    }
+    
+    public static void getMostFit(int[] popInt, String[] population){
+        // LINEAR SEARCH
+        // GET CLOSEST TO HELLO
     }
 
     public static void Evolve(ArrayList<String> population, double mutationRatio, double crossRatio, double elitismRatio) {
